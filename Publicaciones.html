@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Museo Soumaya</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+	</head>
+	<body
+		style="
+			background-color: #f0dfce;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		">
+		<!-- Segundo Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark"
+			id="navbar2"
+			style="
+				background-color: #f0dfce;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 998;
+				transition: top 0.5s ease-in-out, opacity 1s ease-in-out,
+					filter 1s ease-in-out;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Imagen "Edificio" -->
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="images/pagesStart/logo.png"
+						alt="Edificio"
+						style="max-height: 50px" />
+				</a>
+
+				<!-- Menú de navegación centrado con las 4 secciones -->
+				<button
+					class="navbar-toggler d-lg-none"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item" style="margin-right: 20px">
+							<!-- Espacio entre opciones -->
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Colecciones.html"
+								id="link-colecciones"
+								>COLECCIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Publicaciones.html"
+								id="link-publicaciones"
+								>PUBLICACIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Exposiciones.html"
+								id="link-exposiciones"
+								>EXPOSICIONES</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Actividades.html"
+								id="link-actividades"
+								>ACTIVIDADES</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Ícono de búsqueda al final (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<i class="bi bi-search text-white" style="font-size: 1.5rem"></i>
+				</a>
+			</div>
+		</nav>
+
+		<main>
+			<section class="mt-4">
+				<div id="contenido" class="container" style="margin-top: 5%">
+					<div
+						class="d-flex flex-column"
+						style="
+							background-color: #c2906c;
+							padding: 30px 40px;
+							padding-bottom: 50px;
+						">
+						<h1
+						id="tituloPlaza"
+						class="fw-bold fst-italic"
+						style="
+							margin-bottom: 30px;
+							text-align: start;
+							font-family: 'Questrial', sans-serif;
+						">
+						PUBLICACIONES
+					</h1>
+					
+					<style>
+						/* Responsive Layout */
+						@media (max-width: 768px) {
+							#tituloPlaza {
+								margin-top: 80px; /* Aumenta este valor si es necesario para evitar que el texto quede tapado */
+							}
+						}
+					</style>
+
+						<!-- Contenedor de imágenes, primera fila 1 / 4 -->
+						<div
+							class="row g-2 justify-content-center"
+							style="
+								overflow-x: auto;
+								white-space: nowrap;
+								padding-bottom: 15px;
+							">
+							<!-- Imagen 1 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/4.jpg"
+									alt="Imagen 1"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 1', 'De Marfil Fruto de la generosa donación hecha por Laura Fernández MacGregor y Maza, este libro representa un canto a la beldad del pasado remoto. Más de 300 piezas de procedencia asiática, europea y africana estudiadas por los especialistas de El Colegio de México y Fundación Carlos Slim, con comentarios de las obras más destacadas, incluye catálogo de obra y un glosario que redondea las características particulares de la colección. El libro cuenta con Realidad Aumentada Infinitum.')" />
+							</div>
+							<!-- Imagen 2 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/3.jpg"
+									alt="Imagen 2"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 2', 'La puerta del Infierno La colaboración de Museo Rodin de París y Museo Somaya.Fundación Carlos Slim derivó en la exposición que celebró el arribo a México de la que es considerada la obra más importante del artista francés Auguste Rodin. El libro explica la génesis del conjunto escultórico, detalla el proceso creativo y presenta el resultado final con un análisis de las obras, ubicaciones en La puerta y posterior recepción de las mismas por el público de su tiempo. La publicación es trilingüe (español, francés e inglés) y en ella están, por vez primera, las reseñas que de la escultura hicieran los críticos de la época, a fines del siglo XIX. El impreso incluye Realidad Aumentada Infinitum.')" />
+							</div>
+							<!-- Imagen 3 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/2.jpg"
+									alt="Imagen 3"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 3', 'Del marqués a la monja. En coedición con la Universidad del Claustro de Sor Juana, obras de la colección de Museo Soumaya.Fundación Carlos Slim se dan cita aquí, junto a la selección de sonetos en lengua castellana de los siglos XIV al XVII, realizada por el poeta colombiano Darío Jaramillo Agudelo, donde las palabras nos abrazan para hacernos descubrir lo insólito. Esta publicación cuenta con Realidad Aumentada Infinitum.')" />
+							</div>
+							<!-- Imagen 4 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/5.jpg"
+									alt="Imagen 4"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 4', 'Museo Soumaya, Fundación Carlos Slim, 2 tomos Una selección de las obras emblemáticas de más de 30 siglos de arte: Antiguos Maestros Europeos como el Greco, il Tintoretto, Tiziano, Botticelli y un seguidor o taller de Leonardo de Vinci; las vistas de Venecia retratadas en más de 300 años; el arte sacro de los grandes maestros virreinales como Juárez, Villalpando o Correa; el siglo XIX mexicano en la paleta de Clavé, Cordero, Bustos; Romanticismo, Rodin, Impresionismo, Vanguardias y Arte Latinoamericano con los artistas en México del siglo XX, Rivera, Orozco y Siqueiros, entre muchos otros, en dos tomos que presentan los comentarios de curadores e investigadores especializados, quienes han contextualizado las piezas en el escenario del arte universal. Ambos tomos incluyen Realidad Aumentada Infinitum.')" />
+							</div>
+						</div>
+
+						<!-- Contenedor de imágenes, segunda fila 5 / 8 -->
+						<div
+							class="row g-2 justify-content-center"
+							style="overflow-x: auto; white-space: nowrap; padding-top: 15px">
+							<!-- Imagen 5 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/6.jpg"
+									alt="Imagen 5"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 5', '50 años. Centro de Estudios de Historia de México Carso.Fundación Carlos Slim. Con cinco décadas, el Centro de Estudios de Historia de México ha logrado conjuntar documentos que resultan cruciales para la historia del país. Este libro presenta una selección de las colecciones bibliográficas y documentales, con textos escritos por destacados especialistas, algunos de ellos miembros del Consejo Consultivo que abordan la etapa virreinal, la independencia y el complejo periodo decimonónico, el imperio de Maximiliano, Porfirio Díaz y el proceso revolucionario del siglo XX, así como un recuento de los inicios de la fotografía en México. La publicación cuenta con Realidad Aumentada Infinitum.')" />
+							</div>
+							<!-- Imagen 6 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/7.jpg"
+									alt="Imagen 6"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 6', 'Azul en el Soumaya Es el primer cuento que publica Fundación Carlos Slim. Azul visita junto con su abuela Museo Soumaya de Plaza Carso. La niña hace un recorrido imaginario al lado de El pensador y se aventura en algunos de los cuadros más representativos de esta colección mexicana.')" />
+							</div>
+							<!-- Imagen 7 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/8.jpg"
+									alt="Imagen 7"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 7', 'Sophia Loren. México. Ayer, hoy y mañana.281 pp. Una gran estela de vida y creación significa el legado de Sophia Loren. Actriz de celebridad en el mundo, ganadora de premios y reconocimientos internacionales, ha obtenido sobre todo el homenaje deseado: la admiración de un público que por generaciones ha disfrutado y aplaudido su trabajo en el cine, su personalidad y belleza. Desde 1953 Loren estelarizó casi todas las películas en las que ha actuado. Con el acompañamiento profesional y sentimental del productor Carlo Ponti; bajo la dirección del gran cineasta Vittorio De Sica, en 1960 habría de filmar la más reconocida de sus cintas: Dos mujeres (La ciociara), que le valió el Oscar y significó una amplia acogida y contratos en Hollywood. Sophia consolidó un buen matrimonio actoral con Marcello Mastroianni, en películas premiadas por la crítica internacional como Matrimonio a la italiana (Matrimonio all’italiana), realizada también por De Sica en 1964, o Un día especial(Una giornata particolare), de Ettore Scola en 1977.Museo Soumaya. Fundación Carlos Slim celebra la trayectoria de una de las actrices más emblemáticas del orbe con el libro Sophia Loren. México. Ayer, hoy y mañana, donde su colección fílmica, plástica, de moda y testimonial es una invitación para acercarnos al mundo de la diva italiana y vislumbrar momentos dorados en la historia del séptimo arte..')" />
+							</div>
+							<!-- Imagen 8 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/9.jpg"
+									alt="Imagen 8"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 8', 'Calendarios mexicanos. 339 pp. El auge de los calendarios mexicanos marca un hito en la historia cultural del país con dos grandes asuntos que atraviesan la realización de estos impresos de colores vivos y profusas composiciones: los procesos de creación, de diseño y técnicos; y la puesta en primer plano de temas sobre la identidad nacional. Este catálogo que acompaña a la exposición permanente Calendarios mexicanos exhibida en Museo Soumaya de Plaza Loreto, invita a evocar las imágenes producidas en Galas de México que recorrieron todo el país y ofrecieron a los clientes de marcas, empresas y establecimientos comerciales, el recuento de sus días acompañados por una composición con que disfrutar a lo largo de todo un año. La muestra pone especial interés en el proceso industrial para la reproducción de cuadros pintados al óleo, pastel y acuarela. Con tecnología RAInfintum, se integran al catálogo entrevistas en audio y vídeo con pintores, familiares, trabajadores y demás integrantes de la que fuera la gran fábrica de calendarios del siglo XX.')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 9 / 12 -->
+							<!-- Imagen 9 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/10.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN  9', 'El reino de las formas. Grandes maestros. Museo Franz Mayer, Museo Nacional de San Carlos y Museo Soumaya.157 pp. Por primera vez las colecciones europeas del Museo Nacional de San Carlos, Museo Franz Mayer y Museo Soumaya.Fundación Carlos Slim se suman en un proyecto común. Esta muestra inédita busca acercar al espectador desde México a Europa con la profunda herencia occidental que permanece en usos y costumbres, amén del imaginario colectivo. Espejo de sensibilidades y tradiciones que hermanan a dos continentes mediante pinturas y esculturas que se encuentran en un mismo escenario en sus dos grandes expresiones artísticas: la religiosa y la civil. El catálogo convoca a grandes maestros de la tradición occidental como Francisco de Zurbarán, Lucas Cranach, el Viejo, Sebastián Gómez, el Mulato, Luca Giordano, Trophime Bigot, José de Ribera, el Españoleto, Bernardo Llorente Germán, Joshua Reynolds, Horace Vernet, entre muchos otros. Testimonio de una muestra itinerante que ha recorrido varios estados de la República Mexicana.')" />
+							</div>
+							<!-- Imagen 10 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/11.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 10', 'Gibran. El profeta. 143 pp. El poeta y artista universal Gibran Kahlil Gibran nos ha conducido con su pensamiento a lo que nos es esencial, a formas literarias en las profundidades del ser y a los –en ocasiones– insondables misterios del amor. De la más fina sensibilidad, el escritor libanés es icono de sabiduría del Medio Oriente. Poeta, pensador, ensayista, dibujante, pintor y cantor de la vida. En este libro conviven los primeros manuscritos de obras capitales como El Profeta y El Loco; transcripciones mecanografiadas y primeras ediciones; obra plástica, fotografías, libros y objetos queridos que nos arrojan a la dimensión humana del pensador, a la exquisita palabra del poeta del desierto, del oasis. Una selección del acervo que formó durante varias décadas Kahlil Gibran, sobrino y ahijado del artista, que hoy resguarda la Fundación Carlos Slim.')" />
+							</div>
+							<!-- Imagen 11 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/12.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 11', 'Días de humo. 296 pp. El tabaco es vicio y placer. Símbolo de los estatus más diversos. En ocasiones, blanco de escándalo y crítica; hoy, estigma. Este catálogo recorre la historia ritual, de usos y costumbres y de profundo arraigo cultural del acto de fumar. Más de ochocientas piezas entre pinturas, esculturas, estampas, dibujos, artes aplicadas, fotografías, fotogramas, videos, anuncios televisivos y objetos de diversa índole: cigarrillos y cigarreras, puros, pipas, cajas de cerillos, historietas, calendarios, etiquetas, registros de propiedad e imágenes de artistas y creadores. Grandes colecciones y coleccionistas estudiados bajo la mirada de Ana Elena Mallet, curadora de la exposición, así como Nicolás Alvarado, Juan Manuel Aurrecoechea y Julio Patán.')" />
+							</div>
+							<!-- Imagen 12 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/13.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 12', 'El Amor. La colección de Museo Soumaya. 232 pp. Esta publicación se integra por arrebatos eróticos y místicos desde los fondos de Museo Soumaya.Fundación Carlos Slim. A ellos se sumaron testimonios del amor conservados en el Centro de Estudios de Historia de México CARSO, el Museo del Estanquillo, la colección Daniel Liebsohn, el Museo Nacional de Arte, la Fundación Miguel Alemán, el Museo del ex Convento de Huejotzingo y el Convento del Carmen de la Puebla de los Ángeles. Estas páginas recogen, en diversos ensayos, la mirada de notables autores del ámbito cultural, religioso y literario; todos ellos comparten su sensibilidad sobre los grandes aspectos del amor. Ernesto de la Peña, Alberto Ruy Sánchez, Vicente Quirarte, Guadalupe Loaeza, Pedro Reyes, Karen Cordero, José de Jesús Aguilar y una exquisita receta de Mónica Patiño, entre otros, dan cuenta del amor hasta la locura.')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 13 / 16 -->
+							<!-- Imagen 13 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/14.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 13', 'The Age of Rodin. La Era de Rodin. 214 pp. Una colaboración entre el Museo de Arte de Ponce en Puerto Rico, Museo de Arte de Filadelfia en los Estados Unidos y Museo Soumaya.Fundación Carlos Slim de México es testimonio de una itinerancia por las principales capitales latinoamericanas. Edición bilingüe en español-inglés que rinde homenaje al escultor francés y a discípulos y contemporáneos: Ernest Barrias, Émile-Antoine Bourdelle, Jean-Baptiste Carpeaux, Albert-Ernest Carrier-Belleuse, Charles Cordier, Alexandre Falguière, Jean-Léon Gérôme, Henri Peinte, Hiram Powers, James Pradier y Pierre-Auguste Renoir, entre muchos otros.')" />
+							</div>
+							<!-- Imagen 14 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/15.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 14', 'Myth, Mortals and Immortality. Works from Museo Soumaya de México. 86 pp. Testimonio del diálogo entre Museo Soumaya.Fundación Carlos Slim y el Instituto Smithsoniano de Washington, esta publicación español-inglés da cuenta de una centena de obras artísticas de los siglos XVI al XX. Se agrupan en doce temas centrales del imaginario nacional: la herencia indígena, emblemática y viva; el episodio novohispano, de espíritu barroco y espacios domésticos y religiosos; el costumbrismo y la representación de tipos populares; el género de retrato, lazos familiares y ritos ancestrales; el Popocatépetl y el Iztaccíhuatl elevados a leyenda; la abundancia y la exuberancia natural; el Muralismo, la faceta más importante de la plástica nacional; así como las manifestaciones de una devoción fundamental latinoamericana en el amparo de la Virgen de Guadalupe.')" />
+							</div>
+							<!-- Imagen 15 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/16.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 15', 'La guerra entre los Estados Unidos y México. Comentada por don José E. Iturriaga Sauco. Litografías de Carl Nebel. Colección Museo Soumaya. 12 litografías y folleto informativo de 22 pp. Con un texto introductorio de don José E. Iturriaga Sauco, la publicación se integra por las litografías que ilustraron las batallas entre México y los Estados Unidos de Norteamérica entre 1846 y 1848. Con la mirada romántica del alemán Carl Nebel y con la participación del litógrafo Adolphe-Jean-Baptiste Bayot, el iluminador George Frederick Rosenberg y el impresor Rose-Joseph Lemercier, las coloridas imágenes son testimonio de un siglo turbulento que redefinió el camino moderno de nuestro país en el concierto internacional..')" />
+							</div>
+							<!-- Imagen 16 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/17.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 16', 'Juan Soriano. Santo y seña. 181 pp. Museo Soumaya dedica este catálogo a Juan Soriano, a su arte y a su persona. Pinturas, esculturas y dibujos que atestiguan la memoria de los principales momentos creativos del artista. Desde su temprana disidencia hasta las obras que no salieron del caballete. Autorretratos como el que hiciera a los 14 años conviven con la producción realizada a su regreso de Grecia y Roma. De su periodo abstracto, una selección de obras da cuenta de la inquietud experimental de Soriano en telas llenas de virtud cromática. La escultura zoomórfica y el emblemático proyecto literario y teatral de Poesía en voz alta robustecen una publicación sobre la vida personal y artística del llamado Niño de mil años.')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 17 / 20 -->
+							<!-- Imagen 17 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/18.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 17', 'Tesoros de papel. Documentos del Centro de Estudios de Historia de México Condumex [hoy CARSO] en Museo Soumaya. 381 pp. Códice Totomixtlahuaca; cartas autógrafas de Cristóbal Colón y de Isabel y Fernando, los Reyes Católicos; el Catecismo testeriano; documentos de Hernán Cortés y Bernal Díaz del Castillo; bandos de la guerra de Independencia nacional; el Plan de Iguala y el Manifiesto al Mundo de Agustín de Iturbide; retratos y documentos de los emperadores Maximiliano y Carlota; cartas de Benito Juárez y Porfirio Díaz, así como las fotografías y documentos de los caudillos Emiliano Zapata, Francisco Villa y Venustiano Carranza. Quinientos años de historia de papel que ha evolucionado y revolucionado a México en una colaboración conjunta con el Centro de Estudios de Historia de México CARSO y Museo Soumaya.Fundación Carlos Slim.')" />
+							</div>
+							<!-- Imagen 18 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/19.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 18', 'Seis siglos de arte. Cien grandes maestros. 489 pp. Con motivo de la primera década de Museo Soumaya en la escena cultural, Seis siglos de arte. Cien grandes maestros celebra una nutrida selección de las obras más representativas de su acervo. Artistas medulares del arte universal de entre los siglos XV y XX en México y Europa. Pintura, escultura, moda, dibujo y artes aplicadas abordan los momentos más emblemáticos de la plástica occidental: Antiguos Maestros Europeos, arte virreinal y decimonónico mexicano, Rodin, Impresionismo y las primeras vanguardias. En opinión de don José E. Iturriaga: Qué gran impacto psicológico tuvo en la mente de la mayoría de la población mundial el Descubrimiento de América; siguió siendo una novedad la gesta de Colón, así como el hecho de que la Tierra no era fija o inmóvil, sino que transitaba alrededor del Sol en forma orbital.')" />
+							</div>
+							<!-- Imagen 19 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/20.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 19', 'Zodiaco Mariano. 250 Años de la declaración pontificia de María de Guadalupe como patrona de México. 215 pp. El culto mariano alcanzó gran fuerza en España tanto en la reconquista de la Península como en la conquista de América. El sábado 9 de diciembre de 1531, a tan sólo diez años de haber sido tomada la ciudad de Tenochtitlan por los españoles, ocurrió un evento que marcaría la historia, tradición y cultura de México: las apariciones de la Virgen de Guadalupe al indígena Juan Diego. En 1754, la declaración pontificia de la Virgen del Tepeyac como patrona de los mexicanos, antecede al surgimiento de una nación. Este catálogo, bajo la curaduría del investigador Jaime Cuadriello, toma como pieza central La proclamación pontificia del patronato de la Virgen de Guadalupe sobre el reino de la Nueva España atribuida a los pinceles de Miguel Cabrera. En torno a ella, 44 devociones marianas de Europa y el Nuevo Mundo exploran un zodiaco sagrado en objetos de ferviente devoción y culto.')" />
+							</div>
+							<!-- Imagen 20 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/21.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 20', 'Miguel Covarrubias. Cuatro miradas. 219 pp. El catálogo da cuenta de la exposición organizada en torno a la visión estética de Miguel Covarrubias por el Museo Mural Diego Rivera, Museo Casa Estudio Diego Rivera y Frida Kahlo, Museo Soumaya y Editorial RM en 2005. En el marco del primer centenario del nacimiento del artista, diversos autores abordan la biografía, sus etapas como caricaturista e ilustrador, el gusto por la danza, la literatura, el coleccionismo y la etnografía del llamado Chamaco. Magdalena Zavala, Américo Sánchez, Juan Coronel y Carlos Monsiváis, entre otros, advierten la versatilidad de un mexicano de carácter universal')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 21 / 24 -->
+							<!-- Imagen 21 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/22.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 21', 'Santuarios de lo íntimo. Retrato en miniatura y relicarios. La colección de Museo Soumaya. 383 pp. «Alarde de maestría técnica», pequeño contenedor de sentimientos, el retrato en miniatura y el relicario son una hazaña para la vista y una promesa para la emoción. Inmensidad íntima. Objetos cargados de la presencia de seres, personajes y lugares sagrados, conforman este catálogo de Santuarios de lo íntimo. Una revisión puntual de la historia cultural y personal de la miniatura en los textos de Guillermo Tovar de Teresa, Carolusa González Tirado, Eduardo Báez Macías, Alfonso Miranda Márquez, Eduardo Merlo Juárez y Alicia Bazarte Martínez, entre muchos otros.')" />
+							</div>
+							<!-- Imagen 22 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/23.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 22', 'Tesoros del Museo Soumaya de México. Siglos XV – XIX. 261 pp. Piezas emblemáticas integran una muestra que se presentó en el Palacio del Marqués de Salamanca en Madrid y en el Edificio de San Nicolás en Bilbao, España entre abril y julio de 2004. Diálogo entre estilos, técnicas, sensibilidades y temas que hermanaron a dos continentes a lo largo de casi cuatrocientos años. Pinceles notables de El Greco, Francisco de Zurbarán, Bartolomé Esteban Murillo, Trophime Bigot, Lucas Cranach, Martin de Vos o Jacopo Tintoretto, frente a espléndidos trabajos novohispanos de Cristóbal de Villalpando, Miguel Cabrera, Juan de Sáenz o Nicolás Enríquez. Pormenorizados estudios de los especialistas Benito Navarrete, Alfonso Pérez Sánchez y Gustavo Curiel enriquecen las páginas de este catálogo.')" />
+							</div>
+							<!-- Imagen 23 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/24.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 23', 'Pudor y liviandad. Tres siglos de moda en México. La colección de Museo Soumaya. 36 pp. La investigadora Eva Ayala Canseco refiere los distintos momentos y usos de la moda como fenómeno social y cultural. Un recuento de vestidos de calle, baile y coctel; frente a la festiva boda o al doliente luto. También la moda infantil de los «niños adultos» de la mano de la tradición folclórica de rebozos y chinas poblanas que abordan el tema de lo mexicano. Nutrida selección de imágenes de los fondos de indumentaria de Museo Soumaya en la dialéctica bautizada por Carlos Monsiváis como del pudor y la liviandad a lo largo de trescientos años.')" />
+							</div>
+							<!-- Imagen 24 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/25.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 24', '2300 Cucharas y utensilios. 2800 años. 235 pp. La colección de don Ernesto Richheimer, el Señor de las cucharas, integra alrededor de 2 mil trescientas piezas reunidas a lo largo de cincuenta años: objetos rituales que, en su conjunto, han sido denominados «cucharas». Utensilios de cocina con los más variados fines y cubiertos de viaje. El catálogo incluye además obra plástica referente al tema, en su mayor parte creada para el coleccionista por diversos maestros como Rufino Tamayo, José Luis Cuevas, Francisco Toledo, Alberto Gironella, Sofía Bassi, Fernando Casas, José García Ocejo, entre otros.')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 25 / 28 -->
+							<!-- Imagen 25 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/26.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 25', 'La leyenda de los cromos. El arte de los calendarios mexicanos del siglo XX en Galas de México. 303 pp. Santiago Galas fundó su empresa de artes gráficas a la par del inicio del siglo XX. Galas de México cumplió el papel –o la tinta– de generar una verdadera enciclopedia de imágenes. Bajo la premisa de que al cliente lo que pinta, ocurrió este fenómeno que reprodujo, de forma masiva y durante más de cinco décadas, los cromos para calendario dentro y fuera del país. Este catálogo reseña la exposición, curada por Alfonso Morales, que tuvo lugar en el año 2000 en Museo Soumaya de Plaza Inbursa-Cuicuilco. La revisión de los procesos cromolitográficos, la restauración del acervo de la fábrica de San Antonio Abad y los grandes ejes de la cultura del calendario en su primer gran acercamiento a este pasaje de la gráfica nacional.')" />
+							</div>
+							<!-- Imagen 26 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/27.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 26', 'Viento detenido. Mitologías e historia en el arte del biombo. Biombos de los siglos XVII al XIX en la colección de Museo Soumaya 263 pp Trece piezas de Asia, Europa y América ilustran la ruta del biombo. Enclave de contactos comerciales y de las influencias entre Oriente y Occidente, este objeto utilitario-artístico formó parte entrañable en la vida cotidiana durante varios siglos. Temas religiosos, históricos, míticos, paisajes y alegorías se documentan en este estudio con dos ensayos panorámicos de los investigadores Gustavo Curiel y Benito Navarrete')" />
+							</div>
+							<!-- Imagen 27 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/28.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 27', 'Silencios compartidos. Javier Hinojosa. 60 pp. La imagen impresa en platino-paladio es la más permanente de todas las impresiones fotográficas, señala el artista de la lente Javier Hinojosa respecto de su trabajo sobre la obra de Javier Marín. Momentos fugaces en formas, cuerpos, gestos y actitudes de la escultura que, en palabras de su curadora Ana Elena Mallet, empiezan a construir mundos llenos de luz y sombra, de música y silencio.')" />
+							</div>
+							<!-- Imagen 28 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/29.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 28', 'Paisaje y otros pasajes mexicanos del siglo XIX en la colección de Museo Soumaya. 255 pp. El paisaje urbano, rural, público y privado fue un elemento señero en la conformación de la identidad mexicana luego de la Independencia nacional en 1821. Vistas del entorno natural registradas por artistas viajeros como Chapman, Egerton y Rugendas; imágenes de iglesias, plazas y calles en la mirada de Urbano López o Casimiro Castro; referencias a la variopinta sociedad en las litografías del italiano Claudio Linati…una serie de pasajes y paisajes expuestos en Museo Soumaya de Plaza Inbursa-Cuicuilco y descrita en los textos de Mónica López Velarde, Alberto Soberanis, Andrés Reséndiz, Ana Elena Mallet y Carlos Monsiváis.')" />
+							</div>
+							<!-- Contenedor de imágenes, segunda fila 29 / 32 -->
+							<!-- Imagen 29 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/30.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 29', '258 pp. De la colección del célebre fotógrafo Manuel Álvarez Bravo (1902-2002), integra este catálogo un conjunto de estampas europeas de los siglos renacentistas. Nunca antes vista en México ni en el extranjero, se presentó en Museo Soumaya de Plaza Loreto en 1998 como portavoz de una época de grandes cambios políticos, sociales, económicos y culturales en Occidente. 105 imágenes de las Escuelas alemana, flamenca, italiana y francesa en la mirada de grandes maestros como Durero, Cranach, Stradanus, Brueghel y los hermanos Beham.')" />
+							</div>
+							<!-- Imagen 30 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/31.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 30', 'Rodin en México. Colección de escultura europea de los siglos XIX y XX. 185 pp. Un concurso de fotografía sobre la escultura de Auguste Rodin en los fondos de Museo Soumaya dio lugar a este catálogo. Resulta fascinante cómo el ojo fotográfico capta y logra un diálogo sin palabras; con imágenes se nos relata en cada una de las fotos una historia visual, advierte Soumaya Slim en el texto introductorio. 26 participantes abordan los colores, formas y emociones contenidas en los grandes proyectos escultóricos del artista francés.')" />
+							</div>
+							<!-- Imagen 31 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/32.jpg"
+									alt="Imagen 11"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 31', 'A nuestra imagen y semejanza. Licencias imaginarias sobre una escultura de Auguste Rodin. Juan Monterrubio. 57 pp. El triángulo amoroso que conformaron el escultor francés Auguste Rodin y sus mujeres: Rose Beuret y la célebre artista Camille Claudel, se pone de manifiesto en esta puesta escénica cuyos diálogos –autoría de Juan Monterrubio– exploran el amor, la pasión, la desesperanza y el olvido como temas centrales.')" />
+							</div>
+							<!-- Imagen 32 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/33.jpg"
+									alt="Imagen 12"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 32', 'Escenas mexicanas en la obra de Teresa Nava. Maquetas de la colección Carlos Monsiváis.95 pp. La memoria creadora: he allí una de las claves para situar el trabajo de Teresa Nava. A partir de las devociones familiares y personales por el arte, y con respeto y delicadeza, reconstruye lo que le consta y lo que le han relatado, lo que imagina y el retrato puntual de sus intuiciones, apunta en el prólogo Carlos Monsiváis. Espacios domésticos, religiosos, públicos y privados conviven en los coloridos dioramas de la artista a partir de su exposición temporal en Museo Soumaya de Plaza Loreto.')" />
+							</div>
+							<!-- Imagen 33 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/34.jpg"
+									alt="Imagen 9"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 33', 'Pintura europea de los siglos XV al XVIII. Colección Museo Soumaya. 56 pp. Con un texto introductorio de Luisa Fernanda Villegas sobre la factura artística en los gremios medievales y renacentistas, este catálogo ilustra la pintura en los reinos holandeses, españoles, italianos y franceses durante los siglos del Humanismo, Barroco y tránsito al Neoclásico. Una selección de obra de los Antiguos Maestros Europeos en los fondos de Museo Soumaya, con representantes de la talla de Guardi, Vitale, Tintoretto, Sarto, Ribera, Bigot, Vos y espléndidos talleres de David Teniers, Rubens y Vernet.')" />
+							</div>
+							<!-- Imagen 34 -->
+							<div class="col-6 col-sm-4 col-md-3 p-2">
+								<img
+									src="images/post/27.jpg"
+									alt="Imagen 10"
+									class="img-fluid"
+									data-bs-toggle="modal"
+									data-bs-target="#infoModal"
+									onclick="cargarInformacion('IMAGEN 34', 'Viento detenido. Mitologías e historia en el arte del biombo. Biombos de los siglos XVII al XIX en la colección de Museo Soumaya. 263 pp. Trece piezas de Asia, Europa y América ilustran la ruta del biombo. Enclave de contactos comerciales y de las influencias entre Oriente y Occidente, este objeto utilitario-artístico formó parte entrañable en la vida cotidiana durante varios siglos. Temas religiosos, históricos, míticos, paisajes y alegorías se documentan en este estudio con dos ensayos panorámicos de los investigadores Gustavo Curiel y Benito Navarrete')" />
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Modal para mostrar información -->
+<div
+class="modal fade"
+id="infoModal"
+tabindex="-1"
+aria-labelledby="infoModalLabel"
+aria-hidden="true">
+<div
+	class="modal-dialog modal-dialog-centered"
+	style="max-width: 90%; width: 80%; max-width: 800px">
+	<div
+		class="modal-content"
+		style="
+			position: relative;
+			background-color: #5a3a23;
+			padding-top: 100px;
+			padding-bottom: 100px;
+		">
+		<!-- Botón de cerrar (X) con color blanco -->
+		<button
+			type="button"
+			class="btn-close"
+			data-bs-dismiss="modal"
+			aria-label="Close"
+			style="
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				color: white;
+				background: transparent;
+				border: none;
+				font-size: 1.5rem;
+			"></button>
+
+		<!-- Contenido del modal -->
+		<div class="modal-body" style="color: white; padding-top: 60px">
+			<h4 id="modalTitulo">Título de la Imagen</h4>
+			<!-- Párrafo con justificación de texto y espaciado -->
+			<p
+				id="modalDescripcion"
+				style="
+					text-align: justify;
+					line-height: 1.6;
+					font-size: 1.1rem;
+					padding-bottom: 20px;
+				">
+				Descripción de la imagen
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+
+		<script>
+			// Función para cargar la información de la imagen en el modal
+			function cargarInformacion(titulo, descripcion) {
+				// Cambiar el contenido del modal con la información de la imagen
+				document.getElementById("modalTitulo").innerText = titulo;
+				document.getElementById("modalDescripcion").innerText = descripcion;
+			}
+		</script>
+
+<footer style="background-color: #f0dfc3; margin: 0">
+	<div
+		style="
+			max-width: 1300px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		">
+		<!-- Imagen -->
+		<img
+			src="images/pagesStart/logo.png"
+			alt="Museo Soumaya"
+			style="
+				max-width: 200px;
+				width: auto;
+				align-self: center;
+				flex-shrink: 0;
+				margin: 20px 0;
+			" />
+
+		<!-- Texto a la derecha de la imagen -->
+		<div
+			style="
+				color: #57361e;
+				font-family: 'Questrial', sans-serif;
+				font-size: 0.8rem;
+				line-height: 1.3;
+				flex: 1;
+				margin-left: 5px;
+				margin-right: 10px;
+			">
+			<p style="margin-bottom: 5px">
+				<br /><br /><br /><br /><br /><br />BLVD. MIGUEL DE CERVANTES
+				SAVEDRA,
+			</p>
+			<p style="margin-bottom: 5px">
+				GRANADA, MIGUEL HIDALGO, 11529 CIUDAD DE
+			</p>
+			<p style="margin-bottom: 5px">MEXICO, CDMX <br /><br /></p>
+			<p style="margin-bottom: 5px">
+				<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					>HORARIO:</span
+				><br />ABRE A LAS 10:30 A.M.-6:30 P.M. LUN A DOM <br /><br />
+			</p>
+			<p style="margin-bottom: 5px">
+				COSTOS DE ADMISIÓN:<br />ENTRADA LIBRE. <br /><br />
+			</p>
+			<p style="margin-bottom: 5px">
+				<span>55 1103 9800 <br /><br /><br /><br /><br /><br /></span>
+			</p>
+		</div>
+
+		<!-- SECCIÓN 2 -->
+		<div
+			style="
+				color: #57361e;
+				font-family: 'Questrial', sans-serif;
+				font-size: 0.8rem;
+				line-height: 1.3;
+				flex: 1;
+				margin-left: 5px;
+			">
+			<p style="margin-bottom: 5px">
+				<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					><br /><br /><br /><br /><br /><br />EQUIPO</span
+				>
+			</p>
+			<p style="margin-bottom: 5px">
+				<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					>PRENSA</span
+				>
+			</p>
+			<p style="margin-bottom: 5px">
+				<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					>OPORTUNIDADES DE TRABAJO Y CONVOCATORIAS <br />NEWSLETTER</span
+				>
+			</p>
+			<p style="margin-bottom: 5px">
+				<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					>AVISO DE PRIVACIDAD <br /><br
+				/></span>
+			</p>
+			<p style="margin-bottom: 5px">
+				<span
+					>TRANSPORTE PÚBLICO: METRO: ESTACIONES RÍO <br />SAN JOAQUÍN Y
+					POLANCO (LINEA 7).</span
+				><br /><br /><br />
+			</p>
+			<p style="margin-bottom: 5px">
+				<span>FUNDADOR:</span
+				><span style="border-bottom: 2px solid #57361e; cursor: pointer"
+					>CARLOS SLIM <br /><br /><br /><br /><br /><br
+				/></span>
+			</p>
+		</div>
+	</div>
+
+	<!-- SECCIÓN DEL COLOR CAFÉ -->
+	<div
+	style="
+		background-color: #57361e;
+		padding: 20px 0;
+		margin: 0;
+		width: 100%;
+	">
+	<div
+		style="
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		">
+		<!-- Ubicación 1 -->
+		<div
+			style="
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 0.9rem;
+				text-align: center;
+			">
+			<p style="margin-bottom: 8px; font-size: 1rem">PLAZA CARSO</p>
+			<a
+				href="https://g.co/kgs/LrXtAJb"
+				target="_blank"
+				style="color: white; text-decoration: none">
+				<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+			</a>
+		</div>
+
+		<!-- Ubicación 2 -->
+		<div
+			style="
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 0.9rem;
+				text-align: center;
+			">
+			<p style="margin-bottom: 8px; font-size: 1rem">PLAZA LORETO</p>
+			<a
+				href="https://g.co/kgs/RFweUp4"
+				target="_blank"
+				style="color: white; text-decoration: none">
+				<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+			</a>
+		</div>
+
+		<!-- Ubicación 3 -->
+		<div
+			style="
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 0.9rem;
+				text-align: center;
+			">
+			<p style="margin-bottom: 8px; font-size: 1rem">
+				ATRIO <br />
+				FRANCISCO
+			</p>
+			<a
+				href="https://g.co/kgs/kDRW593"
+				target="_blank"
+				style="color: white; text-decoration: none">
+				<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+			</a>
+		</div>
+
+		<!-- Ubicación 4 -->
+		<div
+			style="
+				color: white;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 0.9rem;
+				text-align: center;
+			">
+			<p style="margin-bottom: 8px; font-size: 1rem">
+				CASA GUILLERMO <br />
+				TOVAR DE TERESA
+			</p>
+			<a
+				href="https://www.google.com/search?q=CASA+GUILLERMO+TOVAR+DE+TERESA&oq=CASA+GUILLERMO+TOVAR+DE+TERESA&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIQCAEQLhivARjHARiABBiOBTIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg90gEIMTA3MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+				target="_blank"
+				style="color: white; text-decoration: none">
+				<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+	<div class="text-center" style="justify-content: center">
+		<h1
+			style="
+				background-color: #b59985;
+				margin: 0;
+				padding: 15px;
+				color: white;
+				font-family: 'Questrial', sans-serif;
+				font-size: 1rem;
+			">
+			AVISO LEGAL
+		</h1>
+	</div>
+</footer>
+
+<style>
+	/* Responsive Layout */
+	@media (max-width: 768px) {
+		footer div {
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+
+		footer img {
+			margin-bottom: 20px;
+			margin-top: 20px;
+			align-self: center;
+		}
+
+		/* Ajustamos las secciones de texto */
+		footer > div > div {
+			margin: 0; /* Quitamos margen */
+			flex: none; /* Evitamos que el contenido se expanda en exceso */
+			width: 100%; /* Hacemos que las secciones ocupen todo el ancho disponible */
+		}
+
+		footer .text-center h1 {
+			font-size: 1rem;
+			padding: 10px;
+		}
+
+		footer .ubicacion-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+		}
+
+		footer .ubicacion-container > div {
+			margin: 0;
+			padding: 0;
+			flex: 1;
+		}
+
+		footer .text-center i {
+			font-size: 50px;
+		}
+	}
+
+	@media (min-width: 769px) {
+		footer .ubicacion-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 30px;
+		}
+
+		footer .ubicacion-container > div {
+			flex: 1;
+		}
+	}
+</style>
+
+<!-- Incluir FontAwesome para los íconos de ubicación -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

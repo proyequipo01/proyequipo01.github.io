@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Museo Soumaya</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+	</head>
+	<body
+		style="
+			background-color: #f0dfce;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		">
+		<!-- Segundo Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark"
+			id="navbar2"
+			style="
+				background-color: #f0dfce;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 998;
+				transition: top 0.5s ease-in-out, opacity 1s ease-in-out,
+					filter 1s ease-in-out;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Imagen "Edificio" -->
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="images/pagesStart/logo.png"
+						alt="Edificio"
+						style="max-height: 50px" />
+				</a>
+
+				<!-- Menú de navegación centrado con las 4 secciones -->
+				<button
+					class="navbar-toggler d-lg-none"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item" style="margin-right: 20px">
+							<!-- Espacio entre opciones -->
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Colecciones.html"
+								id="link-colecciones"
+								>COLECCIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Publicaciones.html"
+								id="link-publicaciones"
+								>PUBLICACIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Exposiciones.html"
+								id="link-exposiciones"
+								>EXPOSICIONES</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Actividades.html"
+								id="link-actividades"
+								>ACTIVIDADES</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Ícono de búsqueda al final (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<i class="bi bi-search text-white" style="font-size: 1.5rem"></i>
+				</a>
+			</div>
+		</nav>
+		<main>
+			<!-- Imagen de ancho completo, desplazada un poco más hacia abajo -->
+			<div class="container-fluid px-0">
+				<img
+					src="images/activity/1.jpg"
+					class="img-fluid w-100"
+					alt="Imagen de ancho completo"
+					style="height: 150px; object-fit: cover; margin-top: 70px" />
+			</div>
+
+			<section>
+				<!-- Contenedor de imágenes -->
+				<div class="d-flex flex-column align-items-center">
+					<!-- Texto al mismo nivel que las imágenes grandes -->
+					<h2
+						class="fw-bold fst-italic"
+						style="
+							margin-top: 5%;
+							text-align: left; /* Alineación predeterminada para pantallas grandes */
+							font-family: 'Questrial', sans-serif;
+							margin-right: 49%; /* Alinea el texto con la primera imagen */
+						">
+						ACTIVIDADES
+					</h2>
+
+					<!-- Dos imágenes grandes arriba -->
+					<div class="d-flex justify-content-center w-100 mb-3">
+						<div class="mx-2">
+							<img
+								src="images/activity/2.jpg"
+								alt="Imagen grande 1"
+								class="img-fluid"
+								style="width: 75%; margin-left: 25%; object-fit: cover" />
+						</div>
+						<div class="mx-2">
+							<img
+								src="images/activity/3.jpg"
+								alt="Imagen grande 2"
+								class="img-fluid"
+								style="width: 74%; object-fit: cover" />
+						</div>
+					</div>
+
+					<!-- Tres imágenes abajo, alineadas con las dos grandes -->
+					<div
+						class="d-flex justify-content-center w-100"
+						style="margin-top: 4%">
+						<div class="mx-2">
+							<img
+								src="images/activity/4.jpg"
+								alt="Imagen pequeña 1"
+								class="img-fluid"
+								style="width: 340px; object-fit: cover" />
+						</div>
+						<div class="mx-2">
+							<img
+								src="images/activity/5.jpg"
+								alt="Imagen pequeña 2"
+								class="img-fluid"
+								style="width: 335px; object-fit: cover" />
+						</div>
+						<div class="mx-2">
+							<img
+								src="images/activity/6.jpg"
+								alt="Imagen pequeña 3"
+								class="img-fluid"
+								style="width: 340px; object-fit: cover" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centrado del texto para móviles y tabletas */
+					margin-left: 0; /* Eliminar margen izquierdo en pantallas pequeñas */
+				}
+			}
+		</style>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centrado del texto para móviles y tabletas */
+					margin-right: 0; /* Eliminar margen de la derecha en pantallas pequeñas */
+				}
+			}
+		</style>
+
+		<style>
+			/* Centrar el título solo en pantallas pequeñas */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centra el texto */
+					margin-right: 0; /* Elimina el margen derecho */
+					margin-left: 0; /* Elimina el margen izquierdo */
+				}
+			}
+		</style>
+
+		<style>
+			/* Centrar el título solo en pantallas pequeñas */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centra el texto */
+					margin-right: 0; /* Elimina el margen derecho */
+					margin-left: 50%; /* Elimina el margen izquierdo */
+				}
+			}
+		</style>
+
+		<style>
+			/* Ajustes para responsive */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centra el título en pantallas pequeñas */
+					margin-right: 0; /* Elimina el margen a la derecha */
+					padding: 0 15px; /* Añade un padding en ambos lados para evitar que el texto se corte */
+					word-wrap: break-word; /* Evita que el texto se desborde */
+				}
+			}
+		</style>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centra el título solo en pantallas pequeñas */
+					margin-right: 0; /* Elimina el margen a la derecha en pantallas pequeñas */
+					padding: 0; /* Elimina el padding extra en pantallas pequeñas */
+				}
+			}
+		</style>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center; /* Centra el título solo en pantallas pequeñas */
+					margin-right: 0; /* Elimina el margen a la derecha en pantallas pequeñas */
+				}
+			}
+		</style>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center;
+					margin-right: 0; /* Elimina el margen a la derecha */
+				}
+			}
+		</style>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				h2 {
+					text-align: center;
+					margin-right: 0; /* Elimina el margen a la derecha */
+				}
+			}
+		</style>
+
+		<footer style="background-color: #f0dfc3; margin: 0">
+			<div
+				style="
+					max-width: 1300px;
+					margin: 0 auto;
+					display: flex;
+					justify-content: space-between;
+					gap: 20px;
+					align-items: flex-start;
+					flex-wrap: wrap;
+				">
+				<!-- Imagen -->
+				<img
+					src="images/pagesStart/logo.png"
+					alt="Museo Soumaya"
+					style="
+						max-width: 200px;
+						width: auto;
+						align-self: center;
+						flex-shrink: 0;
+						margin: 20px 0;
+					" />
+
+				<!-- Texto a la derecha de la imagen -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+						margin-right: 10px;
+					">
+					<p style="margin-bottom: 5px">
+						<br /><br /><br /><br /><br /><br />BLVD. MIGUEL DE CERVANTES
+						SAVEDRA,
+					</p>
+					<p style="margin-bottom: 5px">
+						GRANADA, MIGUEL HIDALGO, 11529 CIUDAD DE
+					</p>
+					<p style="margin-bottom: 5px">MEXICO, CDMX <br /><br /></p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>HORARIO:</span
+						><br />ABRE A LAS 10:30 A.M.-6:30 P.M. LUN A DOM <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						COSTOS DE ADMISIÓN:<br />ENTRADA LIBRE. <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>55 1103 9800 <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+
+				<!-- SECCIÓN 2 -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+					">
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							><br /><br /><br /><br /><br /><br />EQUIPO</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>PRENSA</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>OPORTUNIDADES DE TRABAJO Y CONVOCATORIAS <br />
+							NEWSLETTER</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>AVISO DE PRIVACIDAD <br /><br
+						/></span>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span
+							>TRANSPORTE PÚBLICO: METRO: ESTACIONES RÍO <br />
+							SAN JOAQUÍN Y POLANCO (LINEA 7).</span
+						><br /><br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span>FUNDADOR:</span
+						><span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>CARLOS SLIM <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- SECCIÓN DEL COLOR CAFÉ -->
+			<div
+				style="
+					background-color: #57361e;
+					padding: 20px 0;
+					margin: 0;
+					width: 100%;
+				">
+				<div
+					style="
+						max-width: 1200px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+					">
+					<!-- Ubicación 1 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA CARSO</p>
+						<a
+							href="https://g.co/kgs/LrXtAJb"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 2 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA LORETO</p>
+						<a
+							href="https://g.co/kgs/RFweUp4"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 3 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							ATRIO <br />
+							FRANCISCO
+						</p>
+						<a
+							href="https://g.co/kgs/kDRW593"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 4 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							CASA GUILLERMO <br />
+							TOVAR DE TERESA
+						</p>
+						<a
+							href="https://www.google.com/search?q=CASA+GUILLERMO+TOVAR+DE+TERESA&oq=CASA+GUILLERMO+TOVAR+DE+TERESA&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIQCAEQLhivARjHARiABBiOBTIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg90gEIMTA3MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center" style="justify-content: center">
+				<h1
+					style="
+						background-color: #b59985;
+						margin: 0;
+						padding: 15px;
+						color: white;
+						font-family: 'Questrial', sans-serif;
+						font-size: 1rem;
+					">
+					AVISO LEGAL
+				</h1>
+			</div>
+		</footer>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				footer div {
+					flex-direction: column; /* Cambia la dirección de las secciones a columna */
+					align-items: center; /* Centra las secciones */
+					gap: 10px; /* Reduce el espacio entre las secciones */
+				}
+
+				footer img {
+					margin-bottom: 20px;
+					margin-top: 20px;
+					align-self: center; /* Centra la imagen */
+				}
+
+				footer .text-center h1 {
+					font-size: 1rem;
+					padding: 10px;
+				}
+
+				.text-center {
+					justify-content: center;
+				}
+
+				footer .text-center {
+					text-align: center;
+				}
+
+				footer .ubicacion-container {
+					display: flex;
+					flex-direction: column; /* Cambia la dirección de los íconos a columna */
+					align-items: center; /* Centra los íconos */
+					gap: 15px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					margin: 0;
+					padding: 0;
+					flex: 1; /* Para que los iconos estén igualmente distribuidos */
+				}
+
+				footer .text-center i {
+					font-size: 50px; /* Reduje el tamaño de los íconos */
+				}
+			}
+
+			@media (min-width: 769px) {
+				footer .ubicacion-container {
+					display: flex;
+					justify-content: space-between; /* En pantallas más grandes, los íconos estarán en fila */
+					align-items: center;
+					gap: 30px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					flex: 1;
+				}
+			}
+		</style>
+
+		<!-- Incluir FontAwesome para los íconos de ubicación -->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>

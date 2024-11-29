@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Museo Soumaya</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+	</head>
+	<body
+		style="
+			background-color: #f0dfce;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		">
+		<!-- Segundo Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark"
+			id="navbar2"
+			style="
+				background-color: #f0dfce;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 998;
+				transition: top 0.5s ease-in-out, opacity 1s ease-in-out,
+					filter 1s ease-in-out;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Imagen "Edificio" -->
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="images/pagesStart/logo.png"
+						alt="Edificio"
+						style="max-height: 50px" />
+				</a>
+
+				<!-- Menú de navegación centrado con las 4 secciones -->
+				<button
+					class="navbar-toggler d-lg-none"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item" style="margin-right: 20px">
+							<!-- Espacio entre opciones -->
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Colecciones.html"
+								id="link-colecciones"
+								>COLECCIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Publicaciones.html"
+								id="link-publicaciones"
+								>PUBLICACIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Exposiciones.html"
+								id="link-exposiciones"
+								>EXPOSICIONES</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Actividades.html"
+								id="link-actividades"
+								>ACTIVIDADES</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Ícono de búsqueda al final (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<i class="bi bi-search text-white" style="font-size: 1.5rem"></i>
+				</a>
+			</div>
+		</nav>
+
+		<main>
+			<section
+				class="container"
+				style="margin-top: 8%; background-color: #f0dfce">
+				<p
+					style="font-family: 'Questrial', sans-serif; margin-left: 108px"
+					class="text-start mb-4 italic fs-4 p-colecciones">
+					COLECCIONES
+				</p>
+
+				<div class="row">
+					<!-- Colección 1 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/01.JPG"
+								class="img-fluid mb-3"
+								alt="Guillermo Tovar de Teresa"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 135px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Guillermo Tovar de Teresa
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 2 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/02.JPG"
+								class="img-fluid mb-3"
+								alt="Antiguos Maestros Europeos"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 100px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Antiguos Maestros Europeos
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 3 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/03.JPG"
+								class="img-fluid mb-3"
+								alt="La Era de Rodin"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 245px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								La Era de Rodin
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 4 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/04.JPG"
+								class="img-fluid mb-3"
+								alt="Del romanticismo al impresionismo y las vanguardias"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 195px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Del romanticismo al
+							</h5>
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 60px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								impresionismo y las vanguardias
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 5 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/05.JPG"
+								class="img-fluid mb-3"
+								alt="Gibran Kahlil Gibran"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 200px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Gibran Kahlil Gibran
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 6 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/06.JPG"
+								class="img-fluid mb-3"
+								alt="Mesoámerica"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 270px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Mesoámerica
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 7 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/07.JPG"
+								class="img-fluid mb-3"
+								alt="Antiguos maestros de los virreinatos americanos"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 138px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Antiguos maestros de los
+							</h5>
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 170px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								virreinatos americanos
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 8 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/08.JPG"
+								class="img-fluid mb-3"
+								alt="Paisaje del México independiente"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 45px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Paisaje del México independiente,
+							</h5>
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 200px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								retrato y miniaturas
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 9 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/09.JPG"
+								class="img-fluid mb-3"
+								alt="Arte Latinoamericano"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 175px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Arte Latinoamericano
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 10 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/10.JPG"
+								class="img-fluid mb-3"
+								alt="Estampa"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 320px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Estampa
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 11 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/11.WEBP"
+								class="img-fluid mb-3"
+								alt="Galas de México"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 243px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Galas de México
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 12 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/12.jpg"
+								class="img-fluid mb-3"
+								alt="Dibujo"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 345px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Dibujo
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 13 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/13.jpg"
+								class="img-fluid mb-3"
+								alt="Numismática"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 270px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Numismática
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 14 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/14.jpg"
+								class="img-fluid mb-3"
+								alt="Arte aplicadas"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 258px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Arte aplicadas
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 15 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/15.jpg"
+								class="img-fluid mb-3"
+								alt="Moda"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 355px;
+									font-family: 'Montserrat', sans-serif;
+								">
+								Moda
+							</h5>
+						</div>
+					</div>
+
+					<!-- Colección 16 -->
+					<div class="col-md-6 mb-4">
+						<div class="text-center">
+							<img
+								src="images/collections/16.jpg"
+								class="img-fluid mb-3"
+								alt="Fondo Documentales"
+								style="width: 65%; height: 250px; object-fit: cover" />
+							<h5
+								class="fst-italic fw-semibold collection-title"
+								style="
+									margin-right: 183px;
+									font-family: 'Montserrat', sans-serif;
+									white-space: nowrap;
+								">
+								Fondo Documentales
+							</h5>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<style>
+				/* Estilo para centrar las letras en pantallas pequeñas (móvil y tablet) */
+				@media (max-width: 768px) {
+					.collection-title {
+						margin-right: 0 !important;
+						text-align: center;
+					}
+					.p-colecciones {
+						margin-top: 25%; /* Aumentamos el margen superior en pantallas pequeñas para que se vea mejor */
+						font-size: 1.5rem; /* Ajustamos el tamaño de fuente si es necesario */
+						text-align: center; /* Centramos el texto */
+						display: block; /* Asegura que el texto ocupe toda la línea para centrarse */
+						margin-left: auto; /* Centramos el texto */
+						margin-right: auto; /* Centramos el texto */
+					}
+				}
+
+				/* Estilo para pantallas de tablet específicamente (entre 576px y 768px) */
+				@media (min-width: 576px) and (max-width: 768px) {
+					.p-colecciones {
+						text-align: center; /* Centrar el texto en tabletas */
+						margin-top: 20%; /* Ajustamos el margen superior para tabletas */
+						font-size: 1.6rem; /* Tamaño adecuado para tabletas */
+					}
+				}
+
+				/* Estilo para pantallas de iPad y dispositivos similares (de mayor tamaño, hasta 1024px) */
+				@media (min-width: 768px) and (max-width: 1024px) {
+					.p-colecciones {
+						text-align: center; /* Centrar el texto */
+						margin-top: 20%; /* Ajustamos el margen superior */
+						font-size: 1.6rem; /* Tamaño adecuado para pantallas de tablet más grandes como el iPad */
+					}
+				}
+			</style>
+
+			<!-- Responsive Section for Mobile and Tablet -->
+			<section
+				class="d-flex justify-content-center align-items-center text-photo"
+				style="background-color: #f0dfce">
+				<div
+					style="
+						background-color: #57361e;
+						width: 64%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						position: relative;
+						margin-bottom: 7%;
+					"
+					class="text-content">
+					<img src="images/collections/17.jpg" alt="" class="img-fluid" />
+					<h5
+						class="fst-italic fw-bold"
+						style="
+							font-family: 'Montserrat', sans-serif;
+							color: #f0dfce;
+							margin-top: 30px;
+							margin-right: 46%;
+						">
+						Fotografía
+					</h5>
+				</div>
+			</section>
+
+			<div
+				style="
+					background-color: #c2906c;
+					width: 100%;
+					height: auto; /* Cambiado de 200px a auto para que se ajuste al contenido */
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-top: 20px; /* Ajuste de margen superior */
+				">
+				<div
+					style="
+						display: flex;
+						justify-content: space-between;
+						width: 70%;
+						flex-wrap: wrap;
+						gap: 10px;
+						padding: 10px;
+					">
+					<img
+						src="images/collections/18.jpg"
+						alt="Imagen 1"
+						style="width: 23%; height: auto; object-fit: cover" />
+					<img
+						src="images/collections/19.jpg"
+						alt="Imagen 2"
+						style="width: 23%; height: auto; object-fit: cover" />
+					<img
+						src="images/collections/20.jpg"
+						alt="Imagen 3"
+						style="width: 23%; height: auto; object-fit: cover" />
+					<img
+						src="images/collections/21.jpg"
+						alt="Imagen 4"
+						style="width: 23%; height: auto; object-fit: cover" />
+				</div>
+			</div>
+		</main>
+
+		<style>
+			/* Responsive styles for Mobile and Tablet */
+			@media (max-width: 768px) {
+				.text-photo {
+					width: 100%; /* Asegura que el ancho sea completo en pantallas pequeñas */
+				}
+
+				.text-content {
+					height: auto; /* Elimina la altura fija */
+					margin-bottom: 20px; /* Agrega un margen inferior para separación */
+				}
+
+				.text-content img {
+					width: 100%; /* Ajusta la imagen para que ocupe todo el contenedor */
+					height: auto; /* Mantiene la relación de aspecto */
+				}
+
+				.text-content h5 {
+					font-size: 18px; /* Ajusta el tamaño del texto */
+					text-align: center; /* Centra el texto */
+					margin-top: 20px; /* Espaciado superior */
+					margin-right: 0; /* Elimina el margen derecho */
+					margin-left: 0; /* Elimina el margen izquierdo */
+					line-height: 1.4; /* Aumenta el espacio entre líneas para mejor legibilidad */
+					white-space: normal; /* Permite que el texto se ajuste dentro del contenedor */
+				}
+
+				/* Ajustes para la galería de imágenes en pantallas pequeñas */
+				.text-photo + div {
+					height: auto; /* Ajusta la altura para que se vea más flexible */
+					margin-top: 20px; /* Separación entre las secciones */
+				}
+
+				.text-photo + div img {
+					width: 24%; /* Ajusta el tamaño de las imágenes para que se acomoden mejor en pantallas pequeñas */
+					margin: 0 4%; /* Añade un margen entre las imágenes */
+				}
+			}
+
+			/* Ajustes para pantallas medianas, como iPad Air */
+			@media (min-width: 768px) and (max-width: 1024px) {
+				.text-photo {
+					margin-left: 5%; /* Mueve el texto hacia la derecha para que no quede pegado al borde */
+				}
+
+				.text-content {
+					margin-right: 5%; /* Espacio adicional a la derecha */
+					padding-left: 20px; /* Separación interna a la izquierda */
+				}
+
+				.text-content h5 {
+					font-size: 20px; /* Tamaño de texto más grande */
+					text-align: center; /* Centra el texto */
+					margin-top: 20px; /* Espaciado superior */
+					margin-bottom: 10px; /* Espaciado inferior */
+					line-height: 1.4; /* Ajusta el espacio entre líneas */
+					white-space: normal; /* Permite que el texto se ajuste dentro del contenedor */
+					overflow: hidden; /* Oculta cualquier desbordamiento */
+					display: -webkit-box; /* Usar un contenedor flexible */
+					-webkit-line-clamp: 2; /* Máximo de 2 líneas */
+					-webkit-box-orient: vertical; /* Asegura que se acomode en una sola dirección */
+				}
+
+				/* Ajusta el contenedor para las imágenes y el texto */
+				.text-photo + div {
+					padding: 20px 0; /* Ajusta espacio entre imágenes y texto */
+				}
+
+				.text-photo + div img {
+					width: 30%; /* Ajusta el tamaño de las imágenes */
+					margin: 0 5%; /* Añade separación entre las imágenes */
+				}
+			}
+
+			/* Ajustes para pantallas grandes (iPad Pro y similares) */
+			@media (min-width: 1024px) and (max-width: 1366px) {
+				.text-photo {
+					margin-left: 5%; /* Mueve el texto hacia la derecha */
+				}
+
+				.text-content {
+					margin-right: 5%; /* Espacio adicional a la derecha */
+					padding-left: 20px; /* Separación interna izquierda */
+				}
+
+				.text-content h5 {
+					font-size: 20px; /* Tamaño de texto más grande */
+					text-align: left; /* Texto alineado a la izquierda */
+				}
+
+				/* Ajustes para imágenes */
+				.text-photo + div img {
+					width: 28%; /* Reduce el ancho de las imágenes */
+					margin: 0 3%; /* Ajusta los márgenes */
+				}
+
+				.text-photo + div {
+					padding: 30px; /* Más espacio en el contenedor */
+				}
+			}
+		</style>
+
+		<footer style="background-color: #f0dfc3; margin: 0">
+			<div
+				style="
+					max-width: 1300px;
+					margin: 0 auto;
+					display: flex;
+					justify-content: space-between;
+					gap: 20px;
+					align-items: flex-start;
+					flex-wrap: wrap;
+				">
+				<!-- Imagen -->
+				<img
+					src="images/pagesStart/logo.png"
+					alt="Museo Soumaya"
+					style="
+						max-width: 200px;
+						width: auto;
+						align-self: center;
+						flex-shrink: 0;
+						margin: 20px 0;
+					" />
+
+				<!-- Texto a la derecha de la imagen -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+						margin-right: 10px;
+					">
+					<p style="margin-bottom: 5px">
+						<br /><br /><br /><br /><br /><br />BLVD. MIGUEL DE CERVANTES
+						SAVEDRA,
+					</p>
+					<p style="margin-bottom: 5px">
+						GRANADA, MIGUEL HIDALGO, 11529 CIUDAD DE
+					</p>
+					<p style="margin-bottom: 5px">MEXICO, CDMX <br /><br /></p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>HORARIO:</span
+						><br />ABRE A LAS 10:30 A.M.-6:30 P.M. LUN A DOM <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						COSTOS DE ADMISIÓN:<br />ENTRADA LIBRE. <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>55 1103 9800 <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+
+				<!-- SECCIÓN 2 -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+					">
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							><br /><br /><br /><br /><br /><br />EQUIPO</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>PRENSA</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>OPORTUNIDADES DE TRABAJO Y CONVOCATORIAS <br />
+							NEWSLETTER</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>AVISO DE PRIVACIDAD <br /><br
+						/></span>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span
+							>TRANSPORTE PÚBLICO: METRO: ESTACIONES RÍO <br />
+							SAN JOAQUÍN Y POLANCO (LINEA 7).</span
+						><br /><br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span>FUNDADOR:</span
+						><span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>CARLOS SLIM <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- SECCIÓN DEL COLOR CAFÉ -->
+			<div
+				style="
+					background-color: #57361e;
+					padding: 20px 0;
+					margin: 0;
+					width: 100%;
+				">
+				<div
+					style="
+						max-width: 1200px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+					">
+					<!-- Ubicación 1 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA CARSO</p>
+						<a
+							href="https://g.co/kgs/LrXtAJb"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 2 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA LORETO</p>
+						<a
+							href="https://g.co/kgs/RFweUp4"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 3 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							ATRIO <br />
+							FRANCISCO
+						</p>
+						<a
+							href="https://g.co/kgs/kDRW593"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 4 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							CASA GUILLERMO <br />
+							TOVAR DE TERESA
+						</p>
+						<a
+							href="https://www.google.com/search?q=CASA+GUILLERMO+TOVAR+DE+TERESA&oq=CASA+GUILLERMO+TOVAR+DE+TERESA&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIQCAEQLhivARjHARiABBiOBTIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg90gEIMTA3MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center" style="justify-content: center">
+				<h1
+					style="
+						background-color: #b59985;
+						margin: 0;
+						padding: 15px;
+						color: white;
+						font-family: 'Questrial', sans-serif;
+						font-size: 1rem;
+					">
+					AVISO LEGAL
+				</h1>
+			</div>
+		</footer>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				footer div {
+					flex-direction: column; /* Cambia la dirección de las secciones a columna */
+					align-items: center; /* Centra las secciones */
+					gap: 10px; /* Reduce el espacio entre las secciones */
+				}
+
+				footer img {
+					margin-bottom: 20px;
+					margin-top: 20px;
+					align-self: center; /* Centra la imagen */
+				}
+
+				footer .text-center h1 {
+					font-size: 1rem;
+					padding: 10px;
+				}
+
+				.text-center {
+					justify-content: center;
+				}
+
+				footer .text-center {
+					text-align: center;
+				}
+
+				footer .ubicacion-container {
+					display: flex;
+					flex-direction: column; /* Cambia la dirección de los íconos a columna */
+					align-items: center; /* Centra los íconos */
+					gap: 15px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					margin: 0;
+					padding: 0;
+					flex: 1; /* Para que los iconos estén igualmente distribuidos */
+				}
+
+				footer .text-center i {
+					font-size: 50px; /* Reduje el tamaño de los íconos */
+				}
+			}
+
+			@media (min-width: 769px) {
+				footer .ubicacion-container {
+					display: flex;
+					justify-content: space-between; /* En pantallas más grandes, los íconos estarán en fila */
+					align-items: center;
+					gap: 30px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					flex: 1;
+				}
+			}
+		</style>
+
+		<!-- Incluir FontAwesome para los íconos de ubicación -->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Museo Soumaya</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+	</head>
+	<body
+		style="
+			background-color: #f0dfce;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		">
+		<!-- Primer Navbar -->
+		<nav
+			class="navbar navbar-expand-lg"
+			id="navbar1"
+			style="
+				background-color: #f0dfce;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 999;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Logo de la izquierda (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<img
+						src="images/pagesStart/Edificio_.png"
+						alt="Logo"
+						class="d-inline-block align-text-top"
+						style="max-height: 140px" />
+				</a>
+
+				<!-- Logo central (visible en pantallas grandes y pequeñas) -->
+				<div class="d-flex justify-content-center w-100">
+					<a class="navbar-brand d-block" href="#">
+						<img
+							src="images/pagesStart/logo.png"
+							alt="Central Image"
+							class="d-inline-block align-text-top"
+							style="max-height: 160px; width: auto" />
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Segundo Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark"
+			id="navbar2"
+			style="
+				background-color: #f0dfce;
+				display: none;
+				position: fixed;
+				top: -100px;
+				width: 100%;
+				z-index: 998;
+				transition: top 0.5s ease-in-out, opacity 1s ease-in-out,
+					filter 1s ease-in-out;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Imagen "Edificio" -->
+				<a class="navbar-brand" href="#">
+					<img
+						src="images/pagesStart/logo.png"
+						alt="Edificio"
+						style="max-height: 50px" />
+				</a>
+
+				<!-- Menú de navegación centrado con las 4 secciones -->
+				<button
+					class="navbar-toggler d-lg-none"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item" style="margin-right: 20px">
+							<!-- Espacio entre opciones -->
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Colecciones.html"
+								id="link-colecciones"
+								>COLECCIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Publicaciones.html"
+								id="link-publicaciones"
+								>PUBLICACIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Exposiciones.html"
+								id="link-exposiciones"
+								>EXPOSICIONES</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Actividades.html"
+								id="link-actividades"
+								>ACTIVIDADES</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Ícono de búsqueda al final (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<i class="bi bi-search text-white" style="font-size: 1.5rem"></i>
+				</a>
+			</div>
+		</nav>
+
+		<!-- Ajustes de contenido para evitar superposición -->
+		<style>
+			body {
+				margin-top: 180px; /* Espacio adicional para evitar superposición con el primer navbar */
+			}
+
+			.nav-link {
+				transition: color 0.3s ease, border-bottom 0.3s ease;
+			}
+
+			.nav-link.active,
+			.nav-link:hover {
+				border-bottom: 2px solid #ffffff; /* Línea blanca debajo de la opción activa */
+				color: #ffc107; /* Cambiar color del texto */
+			}
+		</style>
+
+		<!-- JavaScript para detectar el scroll y destacar la sección activa -->
+		<script>
+			let lastScrollTop = 0; // Para detectar la dirección del scroll
+			const navbar1 = document.getElementById("navbar1");
+			const navbar2 = document.getElementById("navbar2");
+			const navLinks = document.querySelectorAll(".nav-link");
+
+			// Detectar scroll para mostrar u ocultar navbars
+			window.addEventListener("scroll", function () {
+				let scrollTop =
+					window.pageYOffset || document.documentElement.scrollTop;
+
+				if (scrollTop > lastScrollTop && scrollTop > 0) {
+					// Scroll hacia abajo y no en el tope de la página
+					navbar1.style.display = "none"; // Ocultar el primer navbar
+					navbar2.style.display = "block"; // Mostrar el segundo navbar
+					navbar2.style.top = "0"; // Deslizar el navbar desde la parte superior
+					navbar2.style.opacity = "1"; // Hacerlo completamente visible
+					navbar2.style.filter = "blur(0)"; // Eliminar cualquier desenfoque
+				} else if (scrollTop === 0) {
+					// Al llegar al límite superior de la página
+					navbar1.style.display = "block"; // Mostrar el primer navbar
+					navbar2.style.opacity = "0"; // Hacerlo invisible
+					navbar2.style.filter = "blur(5px)"; // Aplicar desenfoque antes de desaparecer
+					navbar2.style.top = "-100px"; // Mover el navbar fuera de la pantalla
+				}
+
+				lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evitar que lastScrollTop sea negativo
+			});
+
+			// Detectar clic en enlaces y destacar el activo
+			navLinks.forEach((link) => {
+				link.addEventListener("click", function () {
+					navLinks.forEach((nav) => nav.classList.remove("active")); // Remover clase activa de todos los enlaces
+					link.classList.add("active"); // Agregar clase activa al enlace clickeado
+				});
+			});
+		</script>
+
+		<main>
+			<!-- General Styles -->
+			<style>
+				/* General Styles */
+				.container {
+					margin: 0 auto;
+				}
+
+				.text-start {
+					text-align: left;
+				}
+
+				/* Image responsiveness */
+				.content-container img {
+					width: 100%;
+					height: auto;
+				}
+
+				/* Mobile responsive */
+				@media (max-width: 768px) {
+					.content-container img {
+						width: 80%;
+						max-height: 50%;
+						margin-top: 55%;
+					}
+
+					.content-container .d-flex {
+						position: relative;
+						top: 10px;
+						text-align: center;
+					}
+
+					.content-container .d-flex p,
+					.content-container .d-flex h1 {
+						font-size: 18px;
+					}
+
+					.content-container .fs-4 {
+						font-size: 1.2rem;
+					}
+
+					/* Remove margin on text */
+					.content-container .text-start.mb-2,
+					.content-container .text-start.mb-3,
+					.content-container .text-start.fs-4 {
+						margin-left: 0;
+						margin-right: 0;
+					}
+
+					/* Padding adjustments */
+					.content-container {
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+				}
+
+				/* Tablet responsive */
+				@media (min-width: 768px) and (max-width: 1024px) {
+					.content-container img {
+						width: 60%;
+						max-height: 30%;
+						margin-top: 10%;
+					}
+
+					.content-container .d-flex {
+						position: relative;
+						top: 20px;
+						text-align: center;
+					}
+
+					.content-container .fs-4 {
+						font-size: 1.5rem;
+					}
+
+					/* Padding adjustments */
+					.content-container {
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+				}
+
+				/* Desktop responsive */
+				@media (min-width: 1024px) {
+					.content-container img {
+						width: 50%;
+						max-height: 30%;
+						margin-top: 13%;
+					}
+
+					.content-container .d-flex {
+						position: relative;
+						top: 50px;
+						left: 260px;
+						text-align: left;
+					}
+
+					.content-container .fs-4 {
+						font-size: 1.6rem;
+					}
+
+					/* Padding adjustments */
+					.content-container {
+						padding-top: 20px;
+						padding-bottom: 20px;
+					}
+				}
+			</style>
+
+			<section class="container text-center content-container">
+				<div class="mb-3">
+					<!-- Imagen 1 -->
+					<img
+						src="images/pagesStart/1.jpg"
+						alt="Interior del Museo Soumaya"
+						class="img-fluid rounded mb-0"
+						id="first-image" />
+					<div class="d-flex justify-content-center flex-column mt-0 me-4">
+						<p
+							style="font-family: 'Questrial', sans-serif"
+							class="text-start mb-2 italic fs-4">
+							EXPOSICIÓN ACTUAL
+						</p>
+						<h1
+							style="font-family: Arimo, sans-serif"
+							class="text-start mb-3 fst-italic fw-semibold fs-2">
+							RECORRIDO VIRTUAL: DISFRUTA LOS <br />
+							30 SIGLOS DE ARTE EN MÉXICO
+						</h1>
+						<p
+							style="font-family: 'Montserrat', sans-serif"
+							class="fs-5 text-start italic fs-4">
+							26.OCT.2024 - 01.DIC.2024
+						</p>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<!-- Imagen 2 -->
+					<img
+						src="images/pagesStart/2.jpg"
+						alt="Interior del Museo Soumaya"
+						class="img-fluid rounded mb-0" />
+					<div class="d-flex justify-content-center flex-column mt-0 me-4">
+						<p
+							style="font-family: 'Questrial', sans-serif"
+							class="text-start mb-2 italic fs-4">
+							EXPOSICIÓN ACTUAL
+						</p>
+						<h1
+							style="font-family: Arimo, sans-serif"
+							class="text-start mb-3 fst-italic fw-semibold fs-2">
+							EL PENSADOR DE RODIN EN UN <br />
+							VESTÍBULO BLANCO
+						</h1>
+						<p
+							style="font-family: 'Montserrat', sans-serif"
+							class="fs-5 text-start italic fs-4">
+							12.OCT.2024 - 10.FEB.2024
+						</p>
+					</div>
+				</div>
+
+				<div class="mb-3">
+					<!-- Imagen 3 -->
+					<img
+						src="images/pagesStart/3.jpg"
+						alt="Interior del Museo Soumaya"
+						class="img-fluid rounded mb-0" />
+					<div class="d-flex justify-content-center flex-column mt-0 me-4">
+						<p
+							style="font-family: 'Questrial', sans-serif"
+							class="text-start mb-2 italic fs-4">
+							EXPOSICIÓN ACTUAL
+						</p>
+						<h1
+							style="font-family: Arimo, sans-serif"
+							class="text-start mb-3 fst-italic fw-semibold fs-2">
+							MUSEO SOUMAYA: LA HISTORIA DETRÁS <br />
+							DE SU CONSTRUCCIÓN
+						</h1>
+						<p
+							style="font-family: 'Montserrat', sans-serif"
+							class="fs-5 text-start italic fs-4">
+							26.OCT.2024 - 05.ENE.2025
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<style>
+				@media (max-width: 768px) {
+					#first-image {
+						margin-top: 190px;
+					}
+				}
+			</style>
+
+			<!-- Section for Upcoming Events -->
+			<section class="text-center py-3" style="background-color: #c2906c">
+				<h1 class="section-title fst-italic fw-semibold text-white">
+					PRÓXIMOS EVENTOS
+				</h1>
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-3 mb-5">
+							<a href=""
+								><img
+									src="images/calendar/calendar.PNG"
+									alt="Evento 1"
+									class="img-fluid"
+							/></a>
+						</div>
+						<div class="col-12 col-sm-3 mb-4">
+							<a
+								href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.muyinteresante.com.mx%2Fhistoria%2F38924.html&psig=AOvVaw0u6R2tKjrlSXbbVxEXCzCt&ust=1731710817059000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCKiX-9Pz3IkDFQAAAAAdAAAAABAh"
+								><img
+									src="images/workshorp/T1.PNG"
+									alt="Evento 2"
+									class="img-fluid"
+							/></a>
+						</div>
+						<div class="col-12 col-sm-3 mb-4">
+							<a
+								href="https://www.travelbymexico.com/blog/10387-talleres-gratuitos-en-el-museo-soumaya-plaza-loreto-noviembre-2011/"
+								><img
+									src="images/workshorp/T2.PNG"
+									alt="Evento 3"
+									class="img-fluid"
+							/></a>
+						</div>
+						<div class="col-12 col-sm-3 mb-4">
+							<a
+								href="https://www.travelbymexico.com/blog/10387-talleres-gratuitos-en-el-museo-soumaya-plaza-loreto-noviembre-2011/">
+								<img
+									src="images/workshorp/T3.PNG"
+									alt="Evento 4"
+									class="img-fluid" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Spacer -->
+			<div class="spacer" style="height: 70px; background-color: #f0dfce"></div>
+
+			<!-- Section for Featured Video -->
+			<section
+				style="
+					background-color: #57361e;
+					height: 80vh;
+					color: #f0dfc3;
+					padding: 20px;
+				">
+				<h1
+					style="
+						font-family: 'Questrial', sans-serif;
+						font-size: 3rem;
+						margin-left: 20%;
+						margin-bottom: 10px;
+						text-align: start;
+					">
+					VIDEO DESTACADO
+				</h1>
+				<div
+					style="
+						display: flex;
+						justify-content: center;
+						align-items: flex-start;
+						height: calc(100% - 50px);
+						margin-top: 60px;
+					">
+					<video
+						controls
+						style="width: 80%; max-width: 800px; border-radius: 10px">
+						<source
+							src="video/Visita el Museo Soumaya CDMX [ Conecta Mx HD ].mp4"
+							type="video/mp4" />
+					</video>
+				</div>
+			</section>
+
+			<!-- Spacer -->
+			<div class="spacer" style="height: 50px; background-color: #f0dfce"></div>
+
+			<section style="background-color: #57361e; color: #f0dfc3; padding: 20px">
+				<h1
+					style="
+						font-family: Arimo, sans-serif;
+						font-size: 3rem;
+						margin-bottom: 10px;
+						text-align: start;
+					">
+					TESTIMONIOS
+				</h1>
+
+				<!-- Carousel -->
+				<div
+					id="carouselExample"
+					class="carousel slide"
+					data-bs-ride="carousel"
+					style="display: flex; justify-content: center; position: relative">
+					<div
+						class="carousel-inner"
+						style="display: flex; justify-content: center">
+						<!-- Primer item del carrusel -->
+						<div
+							class="carousel-item active"
+							style="display: flex; justify-content: center">
+							<img
+								src="images/pagesStart/7.jpg"
+								class="d-block"
+								alt="Imagen 1"
+								style="object-fit: cover; width: 70%; max-height: 400px" />
+						</div>
+						<!-- Segundo item del carrusel -->
+						<div
+							class="carousel-item"
+							style="display: flex; justify-content: center">
+							<img
+								src="images/pagesStart/7.jpg"
+								class="d-block"
+								alt="Imagen 2"
+								style="object-fit: cover; width: 70%; max-height: 400px" />
+						</div>
+					</div>
+
+					<!-- Indicadores en la parte inferior derecha -->
+					<div
+						class="carousel-indicators"
+						style="position: absolute; bottom: 10px; right: 10px">
+						<button
+							type="button"
+							data-bs-target="#carouselExample"
+							data-bs-slide-to="0"
+							class="active"
+							aria-current="true"
+							aria-label="Slide 1"
+							style="
+								border-radius: 50%;
+								background-color: #f0dfc3;
+								border: none;
+								width: 15px;
+								height: 15px;
+								margin: 0 5px;
+							"></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExample"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+							style="
+								border-radius: 50%;
+								background-color: #f0dfc3;
+								border: none;
+								width: 15px;
+								height: 15px;
+								margin: 0 5px;
+							"></button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer style="background-color: #f0dfc3; margin: 0">
+			<div
+				style="
+					max-width: 1300px;
+					margin: 0 auto;
+					display: flex;
+					justify-content: space-between;
+					gap: 20px;
+					align-items: flex-start;
+					flex-wrap: wrap;
+				">
+				<!-- Imagen -->
+				<img
+					src="images/pagesStart/logo.png"
+					alt="Museo Soumaya"
+					style="
+						max-width: 200px;
+						width: auto;
+						align-self: center;
+						flex-shrink: 0;
+						margin: 20px 0;
+					" />
+
+				<!-- Texto a la derecha de la imagen -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+						margin-right: 10px;
+					">
+					<p style="margin-bottom: 5px">
+						<br /><br /><br /><br /><br /><br />BLVD. MIGUEL DE CERVANTES
+						SAVEDRA,
+					</p>
+					<p style="margin-bottom: 5px">
+						GRANADA, MIGUEL HIDALGO, 11529 CIUDAD DE
+					</p>
+					<p style="margin-bottom: 5px">MEXICO, CDMX <br /><br /></p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>HORARIO:</span
+						><br />ABRE A LAS 10:30 A.M.-6:30 P.M. LUN A DOM <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						COSTOS DE ADMISIÓN:<br />ENTRADA LIBRE. <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>55 1103 9800 <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+
+				<!-- SECCIÓN 2 -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+					">
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							><br /><br /><br /><br /><br /><br />EQUIPO</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>PRENSA</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>OPORTUNIDADES DE TRABAJO Y CONVOCATORIAS <br />
+							NEWSLETTER</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>AVISO DE PRIVACIDAD <br /><br
+						/></span>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span
+							>TRANSPORTE PÚBLICO: METRO: ESTACIONES RÍO <br />
+							SAN JOAQUÍN Y POLANCO (LINEA 7).</span
+						><br /><br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span>FUNDADOR:</span
+						><span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>CARLOS SLIM <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- SECCIÓN DEL COLOR CAFÉ -->
+			<div
+				style="
+					background-color: #57361e;
+					padding: 20px 0;
+					margin: 0;
+					width: 100%;
+				">
+				<div
+					style="
+						max-width: 1200px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+					">
+					<!-- Ubicación 1 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA CARSO</p>
+						<a
+							href="https://g.co/kgs/LrXtAJb"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 2 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA LORETO</p>
+						<a
+							href="https://g.co/kgs/RFweUp4"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 3 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							ATRIO <br />
+							FRANCISCO
+						</p>
+						<a
+							href="https://g.co/kgs/kDRW593"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 4 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							CASA GUILLERMO <br />
+							TOVAR DE TERESA
+						</p>
+						<a
+							href="https://www.google.com/search?q=CASA+GUILLERMO+TOVAR+DE+TERESA&oq=CASA+GUILLERMO+TOVAR+DE+TERESA&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIQCAEQLhivARjHARiABBiOBTIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg90gEIMTA3MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center" style="justify-content: center">
+				<h1
+					style="
+						background-color: #b59985;
+						margin: 0;
+						padding: 15px;
+						color: white;
+						font-family: 'Questrial', sans-serif;
+						font-size: 1rem;
+					">
+					AVISO LEGAL
+				</h1>
+			</div>
+		</footer>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				footer div {
+					flex-direction: column; /* Cambia la dirección de las secciones a columna */
+					align-items: center; /* Centra las secciones */
+					gap: 10px; /* Reduce el espacio entre las secciones */
+				}
+
+				footer img {
+					margin-bottom: 20px;
+					margin-top: 20px;
+					align-self: center; /* Centra la imagen */
+				}
+
+				footer .text-center h1 {
+					font-size: 1rem;
+					padding: 10px;
+				}
+
+				.text-center {
+					justify-content: center;
+				}
+
+				footer .text-center {
+					text-align: center;
+				}
+
+				footer .ubicacion-container {
+					display: flex;
+					flex-direction: column; /* Cambia la dirección de los íconos a columna */
+					align-items: center; /* Centra los íconos */
+					gap: 15px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					margin: 0;
+					padding: 0;
+					flex: 1; /* Para que los iconos estén igualmente distribuidos */
+				}
+
+				footer .text-center i {
+					font-size: 50px; /* Reduje el tamaño de los íconos */
+				}
+			}
+
+			@media (min-width: 769px) {
+				footer .ubicacion-container {
+					display: flex;
+					justify-content: space-between; /* En pantallas más grandes, los íconos estarán en fila */
+					align-items: center;
+					gap: 30px; /* Añadí espacio entre los íconos */
+				}
+
+				footer .ubicacion-container > div {
+					flex: 1;
+				}
+			}
+		</style>
+
+		<!-- Incluir FontAwesome para los íconos de ubicación -->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Museo Soumaya</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet" />
+	</head>
+	<body
+		style="
+			background-color: #f0dfce;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		">
+		<!-- Segundo Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-dark"
+			id="navbar2"
+			style="
+				background-color: #f0dfce;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 998;
+				transition: top 0.5s ease-in-out, opacity 1s ease-in-out,
+					filter 1s ease-in-out;
+			">
+			<div class="container d-flex justify-content-between">
+				<!-- Imagen "Edificio" -->
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="images/pagesStart/logo.png"
+						alt="Edificio"
+						style="max-height: 50px" />
+				</a>
+
+				<!-- Menú de navegación centrado con las 4 secciones -->
+				<button
+					class="navbar-toggler d-lg-none"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item" style="margin-right: 20px">
+							<!-- Espacio entre opciones -->
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Colecciones.html"
+								id="link-colecciones"
+								>COLECCIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Publicaciones.html"
+								id="link-publicaciones"
+								>PUBLICACIONES</a
+							>
+						</li>
+						<li class="nav-item" style="margin-right: 20px">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Exposiciones.html"
+								id="link-exposiciones"
+								>EXPOSICIONES</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white"
+								style="font-family: 'Montserrat', sans-serif; font-weight: 600"
+								href="Actividades.html"
+								id="link-actividades"
+								>ACTIVIDADES</a
+							>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Ícono de búsqueda al final (visible solo en pantallas grandes) -->
+				<a class="navbar-brand d-none d-lg-block" href="#">
+					<i class="bi bi-search text-white" style="font-size: 1.5rem"></i>
+				</a>
+			</div>
+		</nav>
+
+		<main class="mt-3">
+			<!-- Imagen de ancho completo, desplazada un poco más hacia abajo -->
+			<div class="container-fluid px-0">
+				<img
+					src="images/exposure/fondo superior.jpg"
+					class="img-fluid w-100"
+					alt="Imagen de ancho completo"
+					style="height: 150px; object-fit: cover; margin-top: 70px" />
+			</div>
+
+			<!-- Sección con imágenes -->
+			<section class="mt-4">
+				<div class="container">
+					<!-- Título alineado a la izquierda con las imágenes -->
+					<h1
+						style="
+							font-family: 'Questrial', sans-serif;
+							margin-left: 0;
+							margin-top: 40px;
+							display: inline-block;
+						"
+						class="fs-2">
+						EXPOSICIONES
+					</h1>
+					<div
+						class="d-flex justify-content-between w-100"
+						style="background-color: #c2906c; padding: 30px">
+						<!-- Imagen 1 -->
+						<img
+							src="images/exposure/1.jpg"
+							alt="Imagen 1"
+							class="img-fluid"
+							style="max-width: 15%; cursor: pointer; object-fit: cover"
+							onclick="mostrarContenido(1)" />
+						<!-- Imagen 2 -->
+						<img
+							src="images/exposure/2.jpg"
+							alt="Imagen 2"
+							class="img-fluid"
+							style="max-width: 15%; cursor: pointer; object-fit: cover"
+							onclick="mostrarContenido(2)" />
+						<!-- Imagen 3 -->
+						<img
+							src="images/exposure/3.jpg"
+							alt="Imagen 3"
+							class="img-fluid"
+							style="max-width: 15%; cursor: pointer; object-fit: cover"
+							onclick="mostrarContenido(3)" />
+						<!-- Imagen 4 -->
+						<img
+							src="images/exposure/4.jpg"
+							alt="Imagen 4"
+							class="img-fluid"
+							style="max-width: 15%; cursor: pointer; object-fit: cover"
+							onclick="mostrarContenido(4)" />
+					</div>
+				</div>
+			</section>
+
+			<!-- Sección con imágenes (segundo bloque que se muestra después del clic) -->
+			<section class="mt-4">
+				<div
+					id="contenido"
+					class="container"
+					style="
+						display: flex;
+						margin-top: 5%;
+						flex-direction: column;
+						align-items: center;
+					">
+					<div
+						class="d-flex flex-column w-100"
+						style="
+							background-color: #c2906c;
+							padding: 30px 40px;
+							margin-bottom: 50px;
+						">
+						<!-- Título que cambiará dinámicamente -->
+						<h1
+							id="tituloPlaza"
+							style="
+								margin-bottom: 30px;
+								text-align: start;
+								font-family: 'Questrial', sans-serif;
+							">
+							Plaza Loreto
+						</h1>
+
+						<!-- Contenedor de imágenes -->
+						<div
+							class="d-flex flex-wrap justify-content-between w-100"
+							style="gap: 20px">
+							<!-- Imágenes que se actualizarán -->
+							<img
+								id="img1"
+								src="images/exposure/expOne/1.jpg"
+								alt="Imagen 1"
+								class="img-fluid"
+								style="
+									max-width: 48%;
+									margin-bottom: 20px;
+									object-fit: contain;
+								" />
+							<img
+								id="img2"
+								src="images/exposure/expOne/2.jpg"
+								alt="Imagen 2"
+								class="img-fluid"
+								style="
+									max-width: 48%;
+									margin-bottom: 20px;
+									object-fit: contain;
+								" />
+							<img
+								id="img3"
+								src="images/exposure/expOne/3.jpg"
+								alt="Imagen 3"
+								class="img-fluid"
+								style="
+									max-width: 48%;
+									margin-bottom: 20px;
+									object-fit: contain;
+								" />
+							<img
+								id="img4"
+								src="images/exposure/expOne/4.jpg"
+								alt="Imagen 4"
+								class="img-fluid"
+								style="
+									max-width: 48%;
+									margin-bottom: 20px;
+									object-fit: contain;
+								" />
+							<img
+								id="img5"
+								src="images/exposure/expOne/5.jpg"
+								alt="Imagen 5"
+								class="img-fluid"
+								style="
+									max-width: 48%;
+									margin-bottom: 20px;
+									object-fit: contain;
+								" />
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script>
+			// Datos de imágenes y títulos para cada opción (1, 2, 3, 4)
+			const imagenes = {
+				1: {
+					fotos: [
+						"images/exposure/expOne/1.jpg",
+						"images/exposure/expOne/2.jpg",
+						"images/exposure/expOne/3.jpg",
+						"images/exposure/expOne/4.jpg",
+						"images/exposure/expOne/5.jpg",
+					],
+					titulo: "PLAZA LORETO", // Título para la opción 1
+				},
+				2: {
+					fotos: [
+						"images/exposure/expTwo/1.jpg",
+						"images/exposure/expTwo/2.jpg",
+						"images/exposure/expTwo/3.jpg",
+						"images/exposure/expTwo/4.jpg",
+					],
+					titulo: "PLAZA CARSO", // Título para la opción 2
+				},
+				3: {
+					fotos: ["images/exposure/3.jpg"],
+					titulo: "ATRIO DE SAN FRANCISCO", // Título para la opción 3
+				},
+				4: {
+					fotos: ["images/exposure/4.jpg"],
+					titulo: "CASA MUSEO GUILLERMO TOVAR DE TERESA", // Título para la opción 4
+				},
+			};
+
+			// Función para mostrar el contenido cuando se hace clic en las imágenes
+			function mostrarContenido(imagen) {
+				// Mostrar el contenedor de imágenes y contenido
+				document.getElementById("contenido").style.display = "flex";
+
+				// Obtener las imágenes y título correspondientes al número seleccionado
+				const seleccion = imagenes[imagen];
+
+				// Cambiar el título dinámicamente
+				const tituloElemento = document.getElementById("tituloPlaza");
+				tituloElemento.textContent = seleccion.titulo;
+
+				// Recorrer y mostrar las imágenes
+				for (let i = 1; i <= 5; i++) {
+					const imgElement = document.getElementById("img" + i);
+					if (seleccion.fotos[i - 1]) {
+						imgElement.src = seleccion.fotos[i - 1]; // Cambiar la fuente de la imagen
+						imgElement.style.display = "inline-block"; // Mostrar la imagen
+					} else {
+						imgElement.style.display = "none"; // Ocultar la imagen si no hay más imágenes disponibles
+					}
+				}
+
+				// Modificar el tamaño de las imágenes solo si se hace clic en la imagen 1
+				if (imagen === 1) {
+					// Cambiar el tamaño de la primera imagen
+					const imgElements = document.querySelectorAll("#contenido img");
+					imgElements.forEach((img, index) => {
+						if (index === 0) {
+							img.style.width = "35%"; // Aumentar tamaño de la primera imagen
+						} else {
+							img.style.width = "14%"; // Reducir tamaño de las demás imágenes
+						}
+					});
+				} else if (imagen === 2) {
+					// Cambiar el tamaño solo para la imagen 2
+					const imgElements = document.querySelectorAll("#contenido img");
+					imgElements.forEach((img) => {
+						img.style.width = "20%"; // Tamaño para las imágenes de la opción 2
+					});
+				} else {
+					// Mantener el tamaño original para las imágenes 3 y 4
+					const imgElements = document.querySelectorAll("#contenido img");
+					imgElements.forEach((img) => {
+						img.style.width = "25%"; // Tamaño predeterminado para las imágenes 3 y 4
+					});
+				}
+			}
+
+			// Mostrar las imágenes de la opción 1 por defecto al cargar la página
+			window.onload = function () {
+				mostrarContenido(1);
+			};
+		</script>
+
+		<footer style="background-color: #f0dfc3; margin: 0">
+			<div
+				style="
+					max-width: 1300px;
+					margin: 0 auto;
+					display: flex;
+					justify-content: space-between;
+					gap: 20px;
+					align-items: flex-start;
+					flex-wrap: wrap;
+				">
+				<!-- Imagen -->
+				<img
+					src="images/pagesStart/logo.png"
+					alt="Museo Soumaya"
+					style="
+						max-width: 200px;
+						width: auto;
+						align-self: center;
+						flex-shrink: 0;
+						margin: 20px 0;
+					" />
+
+				<!-- Texto a la derecha de la imagen -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+						margin-right: 10px;
+					">
+					<p style="margin-bottom: 5px">
+						<br /><br /><br /><br /><br /><br />BLVD. MIGUEL DE CERVANTES
+						SAVEDRA,
+					</p>
+					<p style="margin-bottom: 5px">
+						GRANADA, MIGUEL HIDALGO, 11529 CIUDAD DE
+					</p>
+					<p style="margin-bottom: 5px">MEXICO, CDMX <br /><br /></p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>HORARIO:</span
+						><br />ABRE A LAS 10:30 A.M.-6:30 P.M. LUN A DOM <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						COSTOS DE ADMISIÓN:<br />ENTRADA LIBRE. <br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span>55 1103 9800 <br /><br /><br /><br /><br /><br /></span>
+					</p>
+				</div>
+
+				<!-- SECCIÓN 2 -->
+				<div
+					style="
+						color: #57361e;
+						font-family: 'Questrial', sans-serif;
+						font-size: 0.8rem;
+						line-height: 1.3;
+						flex: 1;
+						margin-left: 5px;
+					">
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							><br /><br /><br /><br /><br /><br />EQUIPO</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>PRENSA</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>OPORTUNIDADES DE TRABAJO Y CONVOCATORIAS <br />NEWSLETTER</span
+						>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>AVISO DE PRIVACIDAD <br /><br
+						/></span>
+					</p>
+					<p style="margin-bottom: 5px">
+						<span
+							>TRANSPORTE PÚBLICO: METRO: ESTACIONES RÍO <br />SAN JOAQUÍN Y
+							POLANCO (LINEA 7).</span
+						><br /><br /><br />
+					</p>
+					<p style="margin-bottom: 5px">
+						<span>FUNDADOR:</span
+						><span style="border-bottom: 2px solid #57361e; cursor: pointer"
+							>CARLOS SLIM <br /><br /><br /><br /><br /><br
+						/></span>
+					</p>
+				</div>
+			</div>
+
+			<!-- SECCIÓN DEL COLOR CAFÉ -->
+			<div
+				style="
+					background-color: #57361e;
+					padding: 20px 0;
+					margin: 0;
+					width: 100%;
+				">
+				<div
+					style="
+						max-width: 1200px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+					">
+					<!-- Ubicación 1 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA CARSO</p>
+						<a
+							href="https://g.co/kgs/LrXtAJb"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 2 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">PLAZA LORETO</p>
+						<a
+							href="https://g.co/kgs/RFweUp4"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 3 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							ATRIO <br />
+							FRANCISCO
+						</p>
+						<a
+							href="https://g.co/kgs/kDRW593"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+
+					<!-- Ubicación 4 -->
+					<div
+						style="
+							color: white;
+							font-family: 'Montserrat', sans-serif;
+							font-size: 0.9rem;
+							text-align: center;
+						">
+						<p style="margin-bottom: 8px; font-size: 1rem">
+							CASA GUILLERMO <br />
+							TOVAR DE TERESA
+						</p>
+						<a
+							href="https://www.google.com/search?q=CASA+GUILLERMO+TOVAR+DE+TERESA&oq=CASA+GUILLERMO+TOVAR+DE+TERESA&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORjjAhiABDIQCAEQLhivARjHARiABBiOBTIHCAIQABiABDIICAMQABgWGB4yCAgEEAAYFhgeMgYIBRBFGD0yBggGEEUYPDIGCAcQRRg90gEIMTA3MGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
+							target="_blank"
+							style="color: white; text-decoration: none">
+							<i class="fas fa-map-marker-alt" style="font-size: 70px"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center" style="justify-content: center">
+				<h1
+					style="
+						background-color: #b59985;
+						margin: 0;
+						padding: 15px;
+						color: white;
+						font-family: 'Questrial', sans-serif;
+						font-size: 1rem;
+					">
+					AVISO LEGAL
+				</h1>
+			</div>
+		</footer>
+
+		<style>
+			/* Responsive Layout */
+			@media (max-width: 768px) {
+				footer div {
+					flex-direction: column;
+					align-items: center;
+					gap: 10px;
+				}
+
+				footer img {
+					margin-bottom: 20px;
+					margin-top: 20px;
+					align-self: center;
+				}
+
+				/* Ajustamos las secciones de texto */
+				footer > div > div {
+					margin: 0; /* Quitamos margen */
+					flex: none; /* Evitamos que el contenido se expanda en exceso */
+					width: 100%; /* Hacemos que las secciones ocupen todo el ancho disponible */
+				}
+
+				footer .text-center h1 {
+					font-size: 1rem;
+					padding: 10px;
+				}
+
+				footer .ubicacion-container {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 15px;
+				}
+
+				footer .ubicacion-container > div {
+					margin: 0;
+					padding: 0;
+					flex: 1;
+				}
+
+				footer .text-center i {
+					font-size: 50px;
+				}
+			}
+
+			@media (min-width: 769px) {
+				footer .ubicacion-container {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					gap: 30px;
+				}
+
+				footer .ubicacion-container > div {
+					flex: 1;
+				}
+			}
+		</style>
+
+		<!-- Incluir FontAwesome para los íconos de ubicación -->
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
